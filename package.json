@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/mau11/the-gpa-calculator#readme",
   "dependencies": {
+    "@material-ui/core": "^4.9.14",
     "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
