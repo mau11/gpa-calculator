@@ -30,6 +30,12 @@ export default class Calculator extends Component {
     this.setState({rows: courses})
   }
 
+  removeCourse(val) {
+    let courses = this.state.rows
+    courses.splice(val, 1)
+    this.setState({rows: courses})
+  }
+
   handleSubmit(e) {
     e.preventDefault()
     const data = new FormData(e.target)
@@ -67,6 +73,10 @@ export default class Calculator extends Component {
             </select>
             <input className="form-control col-2" type="number" name="credits" id={'credits'+i}placeholder="Credits" min="0.5" max="999" step="0.5" required/>
             <img className="col-1" type="button" src="./images/add.svg" onClick={() => (this.newCourse(i))} />
+            {this.state.rows.length > 1 ?
+            <img className="col-1" type="button" src="./images/remove.svg" onClick={() => (this.removeCourse(i))} />
+            : <span className="col-1"></span>
+            }
           </div>
           ))}
           <input type="submit" value="Submit" className="btn btn-secondary"/>
