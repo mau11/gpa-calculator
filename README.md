@@ -10,7 +10,7 @@
 1. [Development](#development)
     1. [Installing Dependencies](#installing-dependencies)
     1. [Build and Serve App](#build-and-serve-app)
-1. [View Application](#run-application)
+1. [View Application](#view-application)
 
 ## Usage
 
