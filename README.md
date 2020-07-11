@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mau11/gpa-calculator.svg?branch=master)](https://travis-ci.org/mau11/gpa-calculator)
+
 # GPA Calculator
 
 > A Grade Point Average (GPA) calculator based on the 4.0 system.

@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- node
+cache:
+  directories:
+    - "node_modules"
+script: npm run build
+deploy:
+  provider: heroku
+  api_key:
+    master: $API_KEY
+  app: the-gpa-calculator
