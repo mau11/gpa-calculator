@@ -61,17 +61,17 @@ export default class Calculator extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container col-10">
         <form onSubmit={this.handleSubmit}>
           {this.state.rows.map((course, i) => (
           <div key={i} className="form-group form-inline col-12">
-            <input className="form-control col-5" type="text" name="class" id={'class'+i} placeholder={'Course #'+ (i+1)} />
-            <select className="form-control col-2" name="grade" id={'grade'+i}>
+            <input className="form-control col-sm-5" type="text" name="class" id={'class'+i} placeholder={'Course #'+ (i+1)} />
+            <select className="form-control col-6 col-sm-2" name="grade" id={'grade'+i}>
               {Object.keys(this.state.grades).map( (grade, index) => (
                 <option key={index}>{grade}</option>
               ))}
             </select>
-            <input className="form-control col-2" type="number" name="credits" id={'credits'+i}placeholder="Credits" min="0.5" max="999" step="0.5" required/>
+            <input className="form-control col-6 col-sm-3" type="number" name="credits" id={'credits'+i} placeholder="Credits" min="0.5" max="999" step="0.5" required />
             <img className="icon m-2" type="button" src="./images/add.svg" onClick={() => (this.newCourse(i))} />
             {this.state.rows.length > 1 ?
             <img className="icon m-2" type="button" src="./images/remove.svg" onClick={() => (this.removeCourse(i))} />
