@@ -72,10 +72,10 @@ export default class Calculator extends Component {
               ))}
             </select>
             <input className="form-control col-2" type="number" name="credits" id={'credits'+i}placeholder="Credits" min="0.5" max="999" step="0.5" required/>
-            <img className="col-1" type="button" src="./images/add.svg" onClick={() => (this.newCourse(i))} />
+            <img className="icon m-2" type="button" src="./images/add.svg" onClick={() => (this.newCourse(i))} />
             {this.state.rows.length > 1 ?
-            <img className="col-1" type="button" src="./images/remove.svg" onClick={() => (this.removeCourse(i))} />
-            : <span className="col-1"></span>
+            <img className="icon m-2" type="button" src="./images/remove.svg" onClick={() => (this.removeCourse(i))} />
+            : <span className="icon m-2"></span>
             }
           </div>
           ))}
